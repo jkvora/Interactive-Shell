@@ -1,0 +1,38 @@
+
+a=$1
+echo  `stat --printf='#file name:%n\n' $1`> fileinfo
+echo  `stat --printf='#access rights in octal:%a\n' $1`>> fileinfo
+echo  `stat --printf='#access rights in human readable form:%A\n' $1`>> fileinfo
+echo  `stat --printf='#the size in bytes of each block reported :%b\n' $1`>> fileinfo
+echo  `stat --printf='#device number in decimal :%d\n' $1`>> fileinfo
+echo  `stat --printf='#device number in hex :%D\n' $1`>> fileinfo
+echo  `stat --printf='#file type :%F\n' $1`>> fileinfo
+echo  `stat --printf='#group ID of owner :%g\n' $1`>> fileinfo
+echo  `stat --printf='#group name of owner :%G\n' $1`>> fileinfo
+echo  `stat --printf='#number of hard links :%h\n' $1`>> fileinfo
+echo  `stat --printf='#inode number :%i\n' $1`>> fileinfo
+echo  `stat --printf='#mount point:%m\n' $1`>> fileinfo
+
+echo  `stat --printf='#optimal I/O transfer size hint:%o\n' $1`>> fileinfo
+echo  `stat --printf='#total size, in bytes :%s\n' $1`>> fileinfo
+echo  `stat --printf='#major device type in hex :%t\n' $1`>> fileinfo
+echo  `stat --printf='#minor device type in hex:%T\n' $1`>> fileinfo
+echo  `stat --printf="#user ID of owner :%u\n'" $1`>> fileinfo
+echo  `stat --printf='#user name of owner:%U\n' $1`>> fileinfo
+echo  `stat --printf='#time of last access, human-readable :%x\n' $1`>> fileinfo
+echo  `stat --printf='#time of last modification, human-readable :%y\n' $1`>> fileinfo
+echo  `stat --printf='#time of last change, human-readable :%z\n' $1`>> fileinfo
+
+
+
+dialog --textbox fileinfo 30 70 
+rc=$?
+if [ "${rc}" == "0" ]; then
+  echo Yes
+   echo `clear`	
+else
+  echo No
+echo `clear`
+fi
+
+
