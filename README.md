@@ -19,6 +19,7 @@ Installation:
 using admin rights.
 
 ->gcc shell.c
+
 ./a.out
 
 
