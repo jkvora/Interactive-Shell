@@ -15,8 +15,9 @@ Also,you can add your on utility and store it in folder /bin/..
 
 Installation:
 
-->Add search and info in folder:
+->Add 'search','info'  and 'searchfile.c' file in folder:
 using admin rights.
+->Shell.c can be put anywhere
 
 ->gcc shell.c
 
